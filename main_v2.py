@@ -30,5 +30,4 @@ while True:
         th.append(threading.Thread(target=test,args={token,}))
     for ths in th:
         ths.start()
-        time.sleep(0.2)
-    time.sleep(300)
+    time.sleep(180)
