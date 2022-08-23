@@ -362,7 +362,7 @@ def vwa(token):
         'price_volume_weighted_average' : cal_volume_weighted_average(docs)
     }
     return data
-def test(token):
+def price(token):
     timest = time.time()
     docs = []
     token = token.upper()+'-USD'
