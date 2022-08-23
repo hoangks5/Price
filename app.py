@@ -8,7 +8,7 @@ from flask import (
     abort,
 )
 from flask_cors import CORS
-import API
+import utils
 
 def response_body(status, data=None, status_code=200):
     status = int(status)
@@ -75,7 +75,7 @@ def median():
     data = check_data(request)
 
     try:
-        result = API.median(data)
+        result = utils.median(data)
         return response_body(status=1, data=result)
     except Exception as error:
         print(str(error))
@@ -87,7 +87,7 @@ def vwa():
     data = check_data(request)
 
     try:
-        result = API.vwa(data)
+        result = utils.vwa(data)
         return response_body(status=1, data=result)
     except Exception as error:
         print(str(error))
@@ -99,7 +99,7 @@ def all():
     data = check_data(request)
 
     try:
-        result = API.price(data)
+        result = utils.price(data)
         return response_body(status=1, data=result)
     except Exception as error:
         print(str(error))
