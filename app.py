@@ -99,7 +99,7 @@ def all():
     data = check_data(request)
 
     try:
-        result = API.test(data)
+        result = API.price(data)
         return response_body(status=1, data=result)
     except Exception as error:
         print(str(error))
